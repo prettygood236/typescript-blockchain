@@ -1,5 +1,5 @@
+//* Implicit Types vs Explicit Types
 {
-  //* Implicit Types vs Explicit Types
   //- We should try to keep the explicit to a minimum.
   //- It's better to let typescript infer it so we can save keystrokes and time.
 
@@ -16,8 +16,8 @@
   d.push(1);
 }
 
+//* Types of TS #1
 {
-  //* Types of TS #1
   let a: number = 1;
   let b: string = 'i';
   let c: boolean = true;
@@ -58,8 +58,9 @@
   // numbers.push(1); //. 'readonly'이므로 수정할 수 없다. (수정하지 않는 filter, map등은 가능하다.)
   const names: readonly string[] = ['1', '2'];
 }
+
+//* Types of TS #2
 {
-  //* Types of TS #2
   //- Tuple : 최소길이를 가지고, 항상 특정 위치에 특정 타입이 있어야하는 array를 지정한다.
   const player: readonly [string, number, boolean] = ['chan', 1, true];
   // player[0] = 1; // Type 'number' is not assignable to type 'string'
@@ -85,8 +86,8 @@
   // console.log(c + d); // 이런 바보같은 짓이 가능해진다.
 }
 
+//* Types of TS #3
 {
-  //* Types of TS #3
   //! Typescript의 중요한 포인트는 타입을 지정하고 Type Checker와 소통하여 바보같은 코드가 작성되지 않도록 보호받는 것이다.
 
   //- unknown : 변수의 타입을 아직 모를 때 사용. 그러면 typescript가 변수를 사용할 때 강제로 타입 확인작업을 시킨다.
