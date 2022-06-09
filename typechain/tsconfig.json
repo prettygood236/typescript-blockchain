@@ -1,0 +1,14 @@
+{
+  "include": ["src"], //. 컴파일할 ts들이 어디에 있느냐
+  "compilerOptions": {
+    "outDir": "build", //. 컴파일된 js들을 어디에 둘 것이냐
+    "target": "ES6", //. 어떤 버전의 js로 컴파일할 것인가
+    "lib": ["ES6", "DOM"], //. js가 동작할 대상 런타임 환경을 알려주어 그 런타임 환경에 해당하는 API를 보여줄 수 있게 된다.
+    //. ex) ES6를 지원하는 서버와 브라우저 환경(DOM). TS가 코드에서 DOM의 모든 event와 method, type을 보여준다.
+    // TS는 브라우저 API type을 포함한 JS API를 알고 있다.
+    "strict": true,
+    // "allowJs": true,
+    "esModuleInterop": true,
+    "module": "CommonJS"
+  }
+}
